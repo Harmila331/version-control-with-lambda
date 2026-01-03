@@ -1,6 +1,6 @@
 ### AWS Lambda Version Control & Alias Management
 
-## 🚀 Why Use Lambda Versioning & Aliases?
+##  Why Use Lambda Versioning & Aliases?
 In real-world production systems, deploying changes directly to a Lambda function can cause:
 - Accidental outages
 - Difficult rollbacks
@@ -19,7 +19,7 @@ AWS Lambda **versioning and aliases** solve these problems by introducing **immu
 This approach is **mandatory for production-grade Lambda applications**.
 
 
-## 🧠 Core Concepts
+## Core Concepts
 
 ### Lambda Function
 A Lambda function consists of:
@@ -45,7 +45,7 @@ A Lambda function consists of:
 
 ---
 
-### 🚀 Step-by-Step Guide:
+###  Step-by-Step Guide:
 
 ## Step 1: Create the Lambda Function
 
@@ -101,7 +101,7 @@ A Lambda function consists of:
     </p>
 <br>
 
-⚠️ Code is uploaded to `$LATEST` at this stage
+ Code is uploaded to `$LATEST` at this stage
 
 <br>
     <p align="center">
@@ -123,7 +123,7 @@ A Lambda function consists of:
     </p>
 <br>
 
-✅ Version **1** is now immutable
+ Version **1** is now immutable
 
 ## Step 4: Create `Prod` Alias
 
@@ -141,7 +141,7 @@ A Lambda function consists of:
     </p>
 <br>
 
-✅ Production traffic now points to **Version 1**
+Production traffic now points to **Version 1**
 <br>
     <p align="center">
         <img src='./images/13.jpeg' width="600" />
@@ -159,7 +159,7 @@ A Lambda function consists of:
     </p>
 <br>
 
-⚠️ Only `$LATEST` is updated — production remains safe
+ Only `$LATEST` is updated — production remains safe
 
 
 ## Step 6: Publish Version 2
@@ -182,7 +182,7 @@ A Lambda function consists of:
     </p>
 <br>
 
-✅ Version **2** is created
+ Version **2** is created
 
 <br>
     <p align="center">
@@ -205,13 +205,13 @@ A Lambda function consists of:
     </p>
 <br>
 
-✅ Test traffic now points to **Version 2**
+ Test traffic now points to **Version 2**
 <br>
     <p align="center">
         <img src='./images/13.jpeg' width="600" />
     </p>
 
-## 🔁 Promote Test to Production
+##  Promote Test to Production
 
 Once testing is successful:
 
@@ -232,7 +232,7 @@ Once testing is successful:
     </p>
 <br>
 
-🚀 Production now runs Version 2 with **zero downtime**
+ Production now runs Version 2 with **zero downtime**
 
 <br>
     <p align="center">
@@ -241,7 +241,7 @@ Once testing is successful:
 
 ---
 
-## ⏪ Rollback Strategy
+##  Rollback Strategy
 
 If any issue occurs in production:
 
@@ -250,7 +250,7 @@ If any issue occurs in production:
 3. Change version back to `1`
 4. Save
 
-⏱️ Rollback completes instantly
+ Rollback completes instantly
 <br>
 <br>
     <p align="center">
@@ -258,7 +258,7 @@ If any issue occurs in production:
     </p>
 <br>
 
-## 🔐 Security & IAM Guidelines
+## Security & IAM Guidelines
 - Grant permissions to **aliases**, not versions
 - Use least-privilege IAM roles
 - Control alias updates via IAM policies
@@ -266,7 +266,7 @@ If any issue occurs in production:
 
 
 
-## 📌 Final Takeaway
+##  Final Takeaway
 Lambda **versioning + aliases** provide:
 - Controlled deployments
 - Environment isolation
